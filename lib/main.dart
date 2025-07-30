@@ -4,68 +4,58 @@ void main() {
   runApp(const FocustApp());
 }
 
-
 class FocustApp extends StatelessWidget {
   const FocustApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-      ),
-      home: Scaffold(
-        body: ListView(children: [
-          SplashScreen(),
-        ]),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: const SplashScreen(),
     );
   }
 }
 
 class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 393,
-          height: 852,
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: const Color(0xFFCFEAD3)),
-          child: Stack(
-            children: [
-              Positioned(
-                left: -632.22,
-                top: -30.61,
-                child: Container(
-                  width: 1074.28,
-                  height: 901.98,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage("https://placehold.co/1074x902"),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
+    final size = MediaQuery.of(context).size;
+
+    return Scaffold(
+      body: Container(
+        width: size.width,
+        height: size.height,
+        color: const Color(0xFFCFEAD3),
+        child: Stack(
+          children: [
+            Positioned(
+              top: size.height * 0.4,
+              left: size.width * 0.5 - 60,
+              child: Text(
+                'Focust',
+                style: const TextStyle(
+                  fontFamily: 'Baloo2',
+                  fontSize: 42,
+                  fontWeight: FontWeight.w800,
+                  color: Color(0xFF418F8C),
                 ),
               ),
-              Positioned(
-                left: 116,
-                top: 317,
-                child: Text(
-                  'Focust',
-                  style: TextStyle(
-                    color: const Color(0xFF418F8C),
-                    fontSize: 52.72,
-                    fontFamily: 'Baloo 2',
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
+            ),
+
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: Image.asset(
+                'assets/images/splash_icon.png',
+                width: size.width * 0.6,
+                fit: BoxFit.contain,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }
