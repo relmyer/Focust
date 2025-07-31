@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  animated_bottom_navigation_bar: ^1.4.0
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +24,7 @@ flutter:
   assets:
     - assets/fonts/
     - assets/splash_icon.png
+    - assets/
 
   fonts:
     - family: Baloo2

@@ -14,7 +14,7 @@ import 'package:focust/screens/profil_olustur_screen.dart';
 import 'package:focust/screens/sifre_screen.dart';
 import 'package:focust/screens/splash_screen.dart';
 import 'package:focust/screens/widget_oneri_screen.dart';
-
+import 'package:focust/screens/challange_screen.dart';
 
 void main() {
   runApp(const FocustApp());
