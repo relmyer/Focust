@@ -1,4 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:focust/screens/alan_sec_screen.dart';
+import 'package:focust/screens/ana_ekran.dart';
+import 'package:focust/screens/hedef_sec_screen.dart';
+import 'package:focust/screens/isim_screen.dart';
+import 'package:focust/screens/mail_screen.dart';
+import 'package:focust/screens/onboarding1_screen.dart';
+import 'package:focust/screens/onboarding2_screen.dart';
+import 'package:focust/screens/onboarding3_screen.dart';
+import 'package:focust/screens/ozet_screen.dart';
+import 'package:focust/screens/planliyorum_screen.dart';
+import 'package:focust/screens/pomodoro_gorev_screen.dart';
+import 'package:focust/screens/profil_olustur_screen.dart';
+import 'package:focust/screens/sifre_screen.dart';
+import 'package:focust/screens/splash_screen.dart';
+import 'package:focust/screens/widget_oneri_screen.dart';
+
 
 void main() {
   runApp(const FocustApp());
@@ -11,51 +27,24 @@ class FocustApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
-    );
-  }
-}
-
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
-    return Scaffold(
-      body: Container(
-        width: size.width,
-        height: size.height,
-        color: const Color(0xFFCFEAD3),
-        child: Stack(
-          children: [
-            Positioned(
-              top: size.height * 0.4,
-              left: size.width * 0.5 - 60,
-              child: Text(
-                'Focust',
-                style: const TextStyle(
-                  fontFamily: 'Baloo2',
-                  fontSize: 42,
-                  fontWeight: FontWeight.w800,
-                  color: Color(0xFF418F8C),
-                ),
-              ),
-            ),
-
-            Positioned(
-              bottom: 0,
-              right: 0,
-              child: Image.asset(
-                'assets/images/splash_icon.png',
-                width: size.width * 0.6,
-                fit: BoxFit.contain,
-              ),
-            ),
-          ],
-        ),
-      ),
+      initialRoute: '/splash',
+      routes: {
+        '/splash': (context) => const SplashScreen(),
+        '/alan': (context) => const AlanSecScreen(),
+        '/onboarding1': (context) => const Onboarding1Screen(),
+        '/onboarding2': (context) => const Onboarding2Screen(),
+        '/onboarding3': (context) => const Onboarding3Screen(),
+        '/hedef': (context) => const HedefSecScreen(),
+        '/widgetOneri': (context) => const WidgetOneriScreen(),
+        '/ozet': (context) => const OzetScreen(),
+        '/planliyorum': (context) => const PlanliyorumScreen(),
+        '/pomodoro': (context) => const PomodoroGorevScreen(),
+        '/profilOlustur': (context) => const ProfilOlusturScreen(),
+        '/isim': (context) => const IsimScreen(),
+        '/mail': (context) => const MailScreen(),
+        '/sifre': (context) => const SifreScreen(),
+        '/anaEkran': (context) => const AnaEkran(),
+      },
     );
   }
 }
