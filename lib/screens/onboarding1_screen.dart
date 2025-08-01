@@ -9,6 +9,7 @@ class Onboarding1Screen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+
           Positioned(
             left: 96,
             top: 298,
@@ -20,39 +21,35 @@ class Onboarding1Screen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 color: Colors.white,
               ),
-            ),
-          ),
-          const Positioned(
-            left: 125,
-            top: 318,
-            child: Text(
-              'Hey! Ben Usto!',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 22,
-                fontFamily: 'Baloo2',
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-          ),
-          Positioned(
-            left: 91,
-            top: 358,
-            child: Container(
-              width: 212,
-              height: 212,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage("https://placehold.co/212x212"),
-                  fit: BoxFit.cover,
+              child: const Center(
+                child: Text(
+                  'Hey! Ben Usto!',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 22,
+                    fontFamily: 'Baloo2',
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ),
             ),
           ),
-          // DEVAM BUTONU
+
+
+          Positioned(
+            left: 91,
+            top: 400,
+            child: Image.asset(
+              "assets/images/usto_1.png",
+              width: 212,
+              height: 212,
+              fit: BoxFit.contain,
+            ),
+          ),
+
           Positioned(
             left: 24,
-            top: 664,
+            bottom: 80,
             child: GestureDetector(
               onTap: () => Navigator.pushNamed(context, '/onboarding2'),
               child: Container(
@@ -61,6 +58,9 @@ class Onboarding1Screen extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: const Color(0xFF418F8C),
                   borderRadius: BorderRadius.circular(12),
+                  boxShadow: const [
+                    BoxShadow(color: Colors.black26, blurRadius: 4, offset: Offset(0, 4))
+                  ],
                 ),
                 child: const Center(
                   child: Text(

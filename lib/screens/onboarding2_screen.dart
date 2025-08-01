@@ -20,39 +20,36 @@ class Onboarding2Screen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 color: Colors.white,
               ),
-            ),
-          ),
-          const Positioned(
-            left: 89,
-            top: 318,
-            child: Text(
-              'Bu yıl emin patilerdesin!',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 22,
-                fontFamily: 'Baloo2',
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-          ),
-          Positioned(
-            left: 88,
-            top: 353,
-            child: Container(
-              width: 218,
-              height: 216,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage("https://placehold.co/218x216"),
-                  fit: BoxFit.cover,
+              child: const Center(
+                child: Text(
+                  'Bu yıl emin patilerdesin!',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 22,
+                    fontFamily: 'Baloo2',
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ),
             ),
           ),
-          // DEVAM BUTONU
+
+
+          Positioned(
+            left: 88,
+            top: 380,
+            child: Image.asset(
+              "assets/images/usto_2.png",
+              width: 218,
+              height: 216,
+              fit: BoxFit.contain,
+            ),
+          ),
+
           Positioned(
             left: 24,
-            top: 664,
+            bottom: 80,
             child: GestureDetector(
               onTap: () => Navigator.pushNamed(context, '/onboarding3'),
               child: Container(
@@ -61,6 +58,9 @@ class Onboarding2Screen extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: const Color(0xFF418F8C),
                   borderRadius: BorderRadius.circular(12),
+                  boxShadow: const [
+                    BoxShadow(color: Colors.black26, blurRadius: 4, offset: Offset(0, 4))
+                  ],
                 ),
                 child: const Center(
                   child: Text(

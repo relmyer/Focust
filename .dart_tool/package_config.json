@@ -116,6 +116,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "percent_indicator",
+      "rootUri": "file:///C:/Users/REL/AppData/Local/Pub/Cache/hosted/pub.dev/percent_indicator-4.2.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/src/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -176,7 +182,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-07-31T15:47:52.135065Z",
+  "generated": "2025-08-01T18:15:22.993912Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///C:/src/flutter",
