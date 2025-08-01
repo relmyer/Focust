@@ -12,23 +12,24 @@ class WidgetOneriScreen extends StatelessWidget {
 
           Positioned(
             left: 18,
-            top: 46,
+            top: 50,
             child: GestureDetector(
               onTap: () => Navigator.pop(context),
               child: Image.asset(
                 "assets/images/geri.png",
-                width: 24,
-                height: 24,
+                width: 26,
+                height: 26,
               ),
             ),
           ),
 
+
           Positioned(
-            left: 57,
-            top: 52,
+            left: 50,
+            top: 54,
             child: Container(
-              width: 314,
-              height: 20,
+              width: 320,
+              height: 18,
               decoration: BoxDecoration(
                 color: const Color(0xFFE7E4E7),
                 borderRadius: BorderRadius.circular(10),
@@ -37,11 +38,11 @@ class WidgetOneriScreen extends StatelessWidget {
           ),
 
           Positioned(
-            left: 57,
-            top: 52,
+            left: 50,
+            top: 54,
             child: Container(
               width: 200,
-              height: 20,
+              height: 18,
               decoration: BoxDecoration(
                 color: const Color(0xFFEA923A),
                 borderRadius: BorderRadius.circular(10),
@@ -69,30 +70,33 @@ class WidgetOneriScreen extends StatelessWidget {
             left: 120,
             top: 104,
             child: Container(
-              width: 239,
-              height: 120,
+              constraints: const BoxConstraints(
+                maxWidth: 240,
+                minHeight: 100,
+              ),
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.white,
-                border: Border.all(color: const Color(0xFFE7E4E7)),
+                border: Border.all(color: Color(0xFFE7E4E7)),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Text(
                 "Ana ekranına bir widget koymak günlük hedefini takip etmek için daha kolay olur!",
-                style: TextStyle(fontSize: 20, fontFamily: 'Baloo2'),
-                textAlign: TextAlign.left,
+                style: TextStyle(fontSize: 18, fontFamily: 'Baloo2'),
+                softWrap: true,
+                overflow: TextOverflow.visible,
               ),
             ),
           ),
 
           Positioned(
-            left: 30,
-            top: 260,
+            left: 15,
+            top: 300,
             child: Container(
-              width: 300,
-              height: 300,
-              decoration: BoxDecoration(
-                image: const DecorationImage(
+              width: 340,
+              height: 340,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
                   image: AssetImage("assets/images/usto_widget.png"),
                   fit: BoxFit.contain,
                 ),

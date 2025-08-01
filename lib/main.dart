@@ -15,6 +15,8 @@ import 'package:focust/screens/sifre_screen.dart';
 import 'package:focust/screens/splash_screen.dart';
 import 'package:focust/screens/widget_oneri_screen.dart';
 import 'package:focust/screens/challange_screen.dart';
+import 'package:focust/screens/streak_screen.dart';
+import 'package:focust/screens/tamamla_ekrani.dart';
 
 void main() {
   runApp(const FocustApp());
@@ -38,6 +40,8 @@ class FocustApp extends StatelessWidget {
         '/widgetOneri': (context) => const WidgetOneriScreen(),
         '/ozet': (context) => const OzetScreen(),
         '/planliyorum': (context) => const PlanliyorumScreen(),
+        '/streak': (context) => const StreakScreen(),
+        '/tamamla': (context) => const TamamlaEkrani(),
         '/pomodoro': (context) => const PomodoroGorevScreen(),
         '/profilOlustur': (context) => const ProfilOlusturScreen(),
         '/isim': (context) => const IsimScreen(),
